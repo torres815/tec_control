@@ -1,0 +1,126 @@
+:root {
+    --primary-cyan: #00f2ff; /* El color de tu logo */
+    --dark-bg: #0d1117;      /* Fondo ultra oscuro */
+    --card-bg: #161b22;      /* Fondo de tarjetas */
+    --border-color: #30363d;
+    --text-main: #c9d1d9;
+    --accent-blue: #0097e6;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Navegación con el estilo del logo */
+.nav-admin {
+    background-color: rgba(13, 17, 23, 0.95);
+    border-bottom: 2px solid var(--primary-cyan);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.nav-logo img {
+    height: 50px; /* Ajusta según prefieras */
+}
+
+/* Botones con estilo Neón Moderno */
+.btn-modern {
+    background: transparent;
+    color: var(--primary-cyan);
+    border: 1.5px solid var(--primary-cyan);
+    padding: 10px 20px;
+    border-radius: 4px; /* Cuadrados con una curva mínima */
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-modern:hover {
+    background: var(--primary-cyan);
+    color: var(--dark-bg);
+    /* Sin sombras, solo cambio de color sólido */
+}
+
+/* Botón de Iniciar Carrera (Verde simple) */
+.btn-start {
+    color: #44bd32;
+    border-color: #44bd32;
+}
+
+.btn-start:hover {
+    background: #44bd32;
+    color: #fff;
+}
+
+/* Botón de Finalizar/Peligro (Rojo simple) */
+.btn-danger {
+    color: #ff4757;
+    border-color: #ff4757;
+    background: transparent;
+}
+
+.btn-danger:hover {
+    background: #ff4757;
+    color: #fff;
+}
+/* Tarjetas y Tablas */
+.container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+
+.table-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    color: var(--primary-cyan);
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tr:hover {
+    background: rgba(0, 242, 255, 0.05);
+}
+
+/* Inputs en modo oscuro */
+input, select {
+    background: #0d1117;
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: var(--primary-cyan);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-cyan);
+}

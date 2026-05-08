@@ -1,0 +1,20 @@
+-- 1. Crear la base de datos (si no existe)
+CREATE DATABASE IF NOT EXISTS tec_control;
+USE tec_control;
+
+-- 2. Crear la tabla corredores exactamente como en la imagen
+CREATE TABLE IF NOT EXISTS corredores (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    fecha_nac DATE NOT NULL,
+    edad INT(11) NOT NULL,
+    genero ENUM('Masculino', 'Femenino') NOT NULL,
+    distancia ENUM('8k', '16k') NOT NULL,
+    dorsal INT(11) NOT NULL,
+    tiempo_llegada TIME DEFAULT NULL,
+    penalizacion TIME DEFAULT '00:00:00',
+    tiempo_final TIME DEFAULT NULL,
+    estado ENUM('Pendiente', 'Finalizado') DEFAULT 'Pendiente',
+    PRIMARY KEY (id),
+    UNIQUE KEY dorsal_unico (dorsal)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
